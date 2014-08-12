@@ -14,7 +14,7 @@ This plugin is extremely simple; no validation is performed on the CSS added her
 
 Please note that Modular Custom CSS requires WordPress 4.0 or higher.
 
-== Frequenntly Asked Questions ==
+== Frequently Asked Questions ==
 = Where is the Custom CSS Stored? =
 Theme CSS is stored as a `theme_mod`, meaning it is a theme-specific option, part of the theme_mod_$theme option in the database. Each theme has its own `theme_mod` for the custom CSS, so if you switch to a new theme, the theme-specific custom CSS will be empty. When you switch back to a previously customized theme, the CSS that you added to it will still be there.
 
