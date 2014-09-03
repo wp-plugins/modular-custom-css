@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Modular Custom CSS
  * Plugin URI: http://celloexpressions.com/plugins/modular-custom-css
- * Description: Write custom CSS that stays specific to each theme; so you can easily switch themes without losing customizations. Includes a place for theme-specific CSS (which is stored with each theme) and a place for plugin-specific CSS (which is run on every theme).
+ * Description: Manage and live-preview theme-specific and plugin-specific Custom CSS in the Customizer.
  * Version: 1.0
  * Author: Nick Halsey
  * Author URI: http://celloexpressions.com/
