@@ -1,10 +1,10 @@
 === Modular Custom CSS ===
 Contributors: celloexpressions
-Tags: Custom CSS, Customizer, Custom Design
+Tags: Custom CSS, Customizer, Custom Design, CSS
 Requires at least: 4.0
 Tested up to: 4.0
 Stable tag: 1.0
-Description: Manage theme-specific and plugin-specific Custom CSS in the Customizer.
+Description: Manage and live-preview theme-specific and plugin-specific Custom CSS in the Customizer.
 License: GPLv2
 
 == Description ==
