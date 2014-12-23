@@ -29,20 +29,20 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
 /**
- * Register the custom CSS section, settings, and controls.
+ * Register the Custom CSS section, settings, and controls.
  *
  * @since Modular Custom CSS 1.0
  */
 function cxnh_custom_css_customize_register( $wp_customize ) {
 	// It really doesn't matter if another plugin or the theme adds the same section; they will merge.
 	$wp_customize->add_section( 'custom_css', array(
-		'title'    => 'Custom CSS',
+		'title'    => __( 'Custom CSS' ),
 		'priority' => 150, // After all core sections.
 	) );
 
-	// 'theme_mod's are stored with the theme, so different themes can have unique custom css rules with basically no extra effort.
+	// 'theme_mod's are stored with the theme, so different themes can have unique custom css rules with no extra effort.
 	$wp_customize->add_setting( 'custom_theme_css' , array(
-		'type'      => 'theme_mod',
+		'type'      => 'theme_mod', // default value.
 		'transport' => 'postMessage',
 	) );
 
@@ -54,14 +54,15 @@ function cxnh_custom_css_customize_register( $wp_customize ) {
 
 	// Uses the `textarea` type added in WordPress 4.0.
 	$wp_customize->add_control( 'custom_theme_css', array(
-		'label'       => 'Custom Theme CSS',
-		'description' => 'Theme-specific; safely sticks with each theme when switching themes.',
+		'label'       => __( 'Custom Theme CSS' ),
+		'description' => __( 'Theme-specific; safely sticks with each theme when switching themes.' ),
 		'type'        => 'textarea',
 		'section'     => 'custom_css',
 	) );
+
 	$wp_customize->add_control( 'custom_plugin_css', array(
-		'label'       => 'Custom Plugin CSS',
-		'description' => 'Theme-agnostic; persists across theme changes.',
+		'label'       => __( 'Custom Plugin CSS' ),
+		'description' => __( 'Theme-agnostic; persists across theme changes.' ),
 		'type'        => 'textarea',
 		'section'     => 'custom_css',
 	) );
@@ -69,7 +70,7 @@ function cxnh_custom_css_customize_register( $wp_customize ) {
 add_action('customize_register','cxnh_custom_css_customize_register');
 
 /**
- * Bind JS handlers to make the Customizer preview load changes asynchronously.
+ * Update the custom CSS setting values in real-time by leveraging the Customizer's postMessage API.
  *
  * @since Modular Custom CSS 1.0
  */
@@ -79,7 +80,7 @@ function cxnh_custom_css_preview_js() {
 add_action( 'customize_preview_init', 'cxnh_custom_css_preview_js' );
 
 /**
- * Render the custom CSS.
+ * Render the custom CSS on the front-end.
  *
  * @since Modular Custom CSS 1.0
  */
