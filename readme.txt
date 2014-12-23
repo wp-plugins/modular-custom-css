@@ -2,7 +2,7 @@
 Contributors: celloexpressions
 Tags: Custom CSS, Customizer, Custom Design, CSS
 Requires at least: 4.0
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 1.0
 Description: Manage and live-preview theme-specific and plugin-specific Custom CSS in the Customizer.
 License: GPLv2
